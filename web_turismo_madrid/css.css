@@ -1,0 +1,256 @@
+body {
+	margin: 20px;
+	background: #ffffff;
+	font: normal small trebuchet MS, arial, helvetica, sans-serif;
+	color: #666666;
+}
+h1, h2, h3 {
+	color: #333333;
+}
+h3 {
+	font-size: 0.75em;
+}
+a {
+	color: #fe2e2e;
+	text-decoration: none;
+}
+p, blockquote, ul, ol {
+	margin-bottom: 1.5em;
+	line-height: 1.65em;
+}
+blockquote {
+	margin-left: 2em;
+	margin-right: 2em;
+	font-style: italic;
+}
+ul {
+	margin-left: 3em;
+}
+ol {
+	margin-left: 3em;
+}
+#contenedor {
+}
+#cabecera {
+	width: 920px;
+	height: 120px;
+	margin: 0 auto;
+	padding: 20px 20px 0 20px;
+	background: url(img/img01.jpg) no-repeat;
+}
+#logo {
+	float: left;
+	width: 340px;
+	height: 50px;
+}
+#logo h1 {
+	float: left;
+	margin: 0;
+    padding: 50px 0 0 0;
+	font-size: 2.6em;
+}
+#logo h2 {
+	float: left;
+	margin-top: -5px;
+	font-size: 1em;
+}
+#logo a {
+	text-decoration: none;
+	color: #fafafa;
+}
+#menu {
+	float: right;
+}
+#menu ul {
+	margin: 0;
+	padding-top: 79px;
+	list-style: none;
+}
+#menu li {
+	display: inline;
+}
+#menu a {
+	display: block;
+	float: left;
+	width: 100px;
+	height: 30px;
+	margin-left: 2px;
+	padding-top: 10px;
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+	color: #000000;
+}
+#menu a:hover {
+	background-image: url(img/img02.jpg);
+	color: #fafafa;
+}
+#menu .active a {
+	background-image: url(img/img02.jpg);
+	color: #fafafa;
+}
+#contenido {
+	width: 920px;
+	margin: 0 auto; 
+	padding: 20px;
+	border-top: 1px solid #ffffff;
+}
+#columna_1 {
+	float: left;
+	width: 220px;
+}
+#login fieldset {
+	border: none;
+}
+#login legend { 
+	display: none;
+}
+#login label {
+	display: block;
+}
+#login input {
+	margin-bottom: 10px;
+	padding: 2px 5px;
+	font: normal small trebuchet MS, arial, helvetica, sans-serif;
+	color: #666666;
+}
+#user #passwd {
+	width: 160px;
+}
+#acceder {
+	margin: 0;
+	padding: 0;
+}
+.modulo {
+}
+.modulo .titulo_menu {
+	background: url(img/img02.jpg)repeat-x;
+	font-size: 1em;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+.modulo .titulo_menu h2 {
+	height: 28px;
+	padding: 10px 0px 0px 20px;
+	text-transform: uppercase;
+	font-size: 1em;
+	color: #ffffff;
+}
+.modulo .contenido_menu {
+	padding: 5px;
+	border-top: 0px solid #ffffff;
+}
+.modulo .contenido_ifrmae {
+}
+.modulo .contenido_menu ul {
+	margin-left: 1em;
+	list-style: none;
+}
+.modulo .metro {
+	list-style: url(img/plano_madrid/metro.png);
+}
+.modulo .cercanias {
+	list-style: url(img/plano_madrid/cercanias.png);
+}
+.modulo .autobuses {
+	list-style: url(img/plano_madrid/autobuses.png);
+}
+.modulo .ir {
+	list-style: url(img/plano_madrid/ir.png);
+}
+.modulo .fb {
+	list-style: url(img/redes_sociales/fb.png);
+}
+.modulo .tt {
+	list-style: url(img/redes_sociales/tt.png);
+}
+#lista p {
+	margin-top: -20px;
+}
+#lista a{
+	text-decoration: none;
+}
+#lista a {
+	font-size: 1em;
+}
+#columna_2 {
+	float: left;
+	width: 480px;
+	padding-left: 20px;
+}
+#noticia {
+}
+.noticia .titulo_noticia {
+	background: url(img/img02.jpg)repeat-x;
+	font-size: 1em;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+.noticia .titulo_noticia span {
+	display: block;
+	height: 28px;
+	padding: 12px 0 0 20px;
+}
+.noticia .fecha_noticia {
+	margin-top: -40px;
+	padding-bottom: 10px;
+	padding-right: 20px;
+	text-align: right;
+	font-size: x-small;
+	color: #ffffff;
+}
+.noticia .contenido_noticia {
+	padding: 20px;
+	border-top: 1px solid #ffffff;
+	font-size: 13px;
+	color: #666666;
+	display: block;
+}
+.noticia .flecha {
+	list-style: url(img/img04.png);
+}
+img {
+	border: none;
+}
+img.right {
+	float: right;
+	margin: 50px 0 0 20px;
+}
+img.imagen_izq {
+	float: left;
+	margin: 5px 30px 20px 0;
+}
+.noticia .pie_noticia {
+	clear: both;
+}
+.noticia .pie_noticia p {
+	margin: 0;
+	padding: 10px 20px 40px 20px;
+	border-top: 1px dotted #cccccc;
+	line-height: normal;
+	font-size: x-small;
+}
+#columna_3 {
+	float: left;
+	width: 180px;
+	padding-left: 20px;
+}
+#modulo_imagen {
+	text-align: center;
+	width: 120px;
+	height: 600px;
+	margin-left: 35px;
+}
+#pie {
+	clear: both;
+	width: 920px;
+	height: 20px;
+	margin: 0 auto; 
+	padding: 20px;
+}
+#pie p {
+	margin: 0;
+	text-align: center;
+	line-height: normal;
+	font-size: 1em;
+}

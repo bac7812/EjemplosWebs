@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pizzeria</title>
+ 
+    <!-- CSS de Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	
+	<!-- Estilos personalizados para esta plantilla -->
+    <link href="css/navbar.css" rel="stylesheet">
+ 
+    <!-- librerías opcionales que activan el soporte de HTML5 para IE8 -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+	</head>
+	<body>
+  
+	<div class="container">
+	
+	<header>
+		<div class="titulo">
+			<h1>Pizzeria</h1>
+		</div>
+	</header><!-- /header -->
+		
+	<section id="formulario">
+		<form name="pedido" action="">
+			<h3>¿En qué dirección?</h3>
+			<label>Dirección: <input name="direccion" type="text" class="form-control"></label>
+			<label>Poblacion: <input name="poblacion" type="text" class="form-control"></label>
+			<label>Provincia: <input name="direccion" type="text" class="form-control"></label>
+			<div class="row">
+				<div class="col-md-4">
+					<h3>Elegir tañamo:</h3>
+					<fieldset>
+						<input type="radio" name="tamano" id="pequena" value="1">
+						<label for="pequena">Pequeña</label>
+						<input type="radio" name="tamano" id="mediana" value="2" checked required>
+						<label for="mediana">Mediana</label>
+						<input type="radio" name="tamano" id="grande" value="3">
+						<label for="grande">Grande</label>
+						<input type="radio" name="tamano" id="familiar" value="4">
+						<label for="familiar">Familiar</label>
+					</fieldset><!-- fieldset tamaños -->
+				</div><!-- col-md-4 -->
+				
+				<div class="col-md-4">
+					<h3>Elegir masa:</h3>
+					<fieldset>
+						<input type="radio" name="masa" id="fina" value="1">
+						<label for="fina">Fina</label>
+						<input type="radio" name="masa" id="normal" value="2" checked required>
+						<label for="normal">Normal</label>
+						<input type="radio" name="masa" id="integral" value="3">
+						<label for="integral">Integral</label>
+						<input type="radio" name="masa" id="roller" value="4">
+						<label for="roller">Roller</label>
+					</fieldset><!-- fieldset masas -->
+				</div><!-- col-md-4 -->
+				
+				<div class="col-md-4">
+					<h3>Elegir salsas:</h3>
+					<fieldset>
+						<select class="form-control" id="salsas"> 
+							<option value="1" >BARBACOA CRÉME DOBLE</option>
+							<option value="2" >BARBACOA DOBLE</option>
+							<option value="3" >BURGER DOBLE</option>
+							<option value="4" >CARBONARA DOBLE</option>
+							<option value="5" >JALISCO DOBLE</option>
+							<option value="6" >TOMATE Y ORÉGANO DOBLE</option>
+							<option value="7" >BARBACOA CRÉME</option>
+							<option value="8" >BARBACOA</option>
+							<option value="9" >BURGER</option>
+							<option value="10" >CARBONARA</option>
+							<option value="11" >JALISCO</option>
+							<option value="12" selected="selected">TOMATE Y ORÉGANO</option>
+							<option value="13" >SIN SALSA</option>
+						</select>
+					</fieldset><!-- fieldset salsas -->
+				</div><!-- col-md-4 -->
+			</div><!-- row -->
+			
+			<h3>Elegir ingredientes:</h3>
+				<p>El numero asociado al ingrediente indica raciones, no unidades</p>
+				<div class="ingredientes">
+					<fieldset>
+						<ul>
+							<li>
+							<input type="button" class="btn btn-default" value="+" id="0" name="suma">
+							<input class="numero" name="ingrediente" type="text" value="0" readonly="readonly">
+							<input type="button" class="btn btn-default" value="-" id="0" name="resta">
+							<label>
+								<img src="img/mozzarella.png" alt="Mozarella" title="Mozarella">
+								Mozzarella
+							</label>
+							</li>
+							<li>
+							<input type="button" class="btn btn-default" value="+" id="1" name="suma">
+							<input class="numero" name="ingrediente" type="text" value="0" readonly="readonly">
+							<input type="button" class="btn btn-default" value="-" id="1" name="resta">
+							<label>
+								<img src="img/quesos.png" alt="5 Quesos" title="5 Quesos">
+								5 Quesos
+							</label>
+							</li>
+							<li>
+							<input type="button" class="btn btn-default" value="+" id="2" name="suma">
+							<input class="numero" name="ingrediente" type="text" value="0" readonly="readonly">
+							<input type="button" class="btn btn-default" value="-" id="2" name="resta">
+							<label>
+								<img src="img/aceitunas_negras.png" alt="Aceitunas negras" title="Aceitunas negras">
+								Aceitunas negras
+							</label>
+							</li>
+							<li>
+							<input type="button" class="btn btn-default" value="+" id="3" name="suma">
+							<input class="numero" name="ingrediente" type="text" value="0" readonly="readonly">
+							<input type="button" class="btn btn-default" value="-" id="3" name="resta">
+							<label>
+								<img src="img/anchoas.png" alt="Anchoas" title="Anchoas">
+								Anchoas
+							</label>
+							</li>
+							<li>
+							<input type="button" class="btn btn-default" value="+" id="4" name="suma">
+							<input class="numero" name="ingrediente" type="text" value="0" readonly="readonly">
+							<input type="button" class="btn btn-default" value="-" id="4" name="resta">
+							<label>
+								<img src="img/atun.png" alt="Atún" title="Atún">
+								Atún
+							</label>
+							</li>
+							<li>
+							<input type="button" class="btn btn-default" value="+" id="5" name="suma">
+							<input class="numero" name="ingrediente" type="text" value="0" readonly="readonly">
+							<input type="button" class="btn btn-default" value="-" id="5" name="resta">
+							<label>
+								<img src="img/bacon.png" alt="Bacon" title="Bacon">
+								Bacon
+							</label>
+							</li>
+							<li>
+							<input type="button" class="btn btn-default" value="+" id="6" name="suma">
+							<input class="numero" name="ingrediente" type="text" value="0" readonly="readonly">
+							<input type="button" class="btn btn-default" value="-" id="6" name="resta">
+							<label>
+								<img src="img/calabacin_parrilla.png" alt="Calabacín parrilla" title="Calabacín parrilla">
+								Calabacín parrilla
+							</label>
+							</li>
+							<li>
+							<input type="button" class="btn btn-default" value="+" id="7" name="suma">
+							<input class="numero" name="ingrediente" type="text" value="0" readonly="readonly">
+							<input type="button" class="btn btn-default" value="-" id="7" name="resta">
+							<label>
+								<img src="img/carne_vacuno.png" alt="Carne de vacuno" title="Carne de vacuno">
+								Carne de vacuno
+							</label>
+							</li>
+							<li>
+							<input type="button" class="btn btn-default" value="+" id="8" name="suma">
+							<input class="numero" name="ingrediente" type="text" value="0" readonly="readonly">
+							<input type="button" class="btn btn-default" value="-" id="8" name="resta">
+							<label>
+								<img src="img/cebolla.png" alt="Cebolla" title="Cebolla">
+								Cebolla
+							</label>
+							</li>
+							<li>
+							<input type="button" class="btn btn-default" value="+" id="9" name="suma">
+							<input class="numero" name="ingrediente" type="text" value="0" readonly="readonly">
+							<input type="button" class="btn btn-default" value="-" id="9" name="resta">
+							<label>
+								<img src="img/cerdo_nueva_orleans.png" alt="Cerdo Nueva Orleans" title="Cerdo Nueva Orleans">
+								Cerdo Nueva Orleans
+							</label>
+							</li>
+							<li>
+							<input type="button" class="btn btn-default" value="+" id="10" name="suma">
+							<input class="numero" name="ingrediente" type="text" value="0" readonly="readonly">
+							<input type="button" class="btn btn-default" value="-" id="10" name="resta">
+							<label>
+								<img src="img/champinon.png" alt="Champiñón" title="Champiñón">
+								Champiñón
+							</label>
+							</li>
+							<li>
+							<input type="button" class="btn btn-default" value="+" id="11" name="suma">
+							<input class="numero" name="ingrediente" type="text" value="0" readonly="readonly">
+							<input type="button" class="btn btn-default" value="-" id="11" name="resta">
+							<label>
+								<img src="img/cordero.png" alt="Cordero" title="Cordero">
+								Cordero
+							</label>
+							</li>
+							<li>
+							<input type="button" class="btn btn-default" value="+" id="12" name="suma">
+							<input class="numero" name="ingrediente" type="text" value="0" readonly="readonly">
+							<input type="button" class="btn btn-default" value="-" id="12" name="resta">
+							<label>
+								<img src="img/esparragos_trigueros.png" alt="Espárragos Trigueros" title="Espárragos Trigueros">
+								Espárragos Trigueros
+							</label>
+							</li>
+							<li>
+							<input type="button" class="btn btn-default" value="+" id="13" name="suma">
+							<input class="numero" name="ingrediente" type="text" value="0" readonly="readonly">
+							<input type="button" class="btn btn-default" value="-" id="13" name="resta">
+							<label>
+								<img src="img/gambas.png" alt="Gambas" title="Gambas">
+								Gambas
+							</label>
+							</li>
+							<li>
+							<input type="button" class="btn btn-default" value="+" id="14" name="suma">
+							<input class="numero" name="ingrediente" type="text" value="0" readonly="readonly">
+							<input type="button" class="btn btn-default" value="-" id="14" name="resta">
+							<label>
+								<img src="img/maiz.png" alt="Maíz" title="Maíz">
+								Maíz
+							</label>
+							</li>
+							<li>
+							<input type="button" class="btn btn-default" value="+" id="15" name="suma">
+							<input class="numero" name="ingrediente" type="text" value="0" readonly="readonly">
+							<input type="button" class="btn btn-default" value="-" id="15" name="resta">
+							<label>
+								<img src="img/pepperoni.png" alt="Pepperoni" title="Pepperoni">
+								Pepperoni
+							</label>
+							</li>
+							<li>
+							<input type="button" class="btn btn-default" value="+" id="16" name="suma">
+							<input class="numero" name="ingrediente" type="text" value="0" readonly="readonly">
+							<input type="button" class="btn btn-default" value="-" id="16" name="resta">
+							<label>
+								<img src="img/pimiento_asado.png" alt="Pimiento asado" title="Pimiento asado">
+								Pimiento asado
+							</label>
+							</li>
+							<li>
+							<input type="button" class="btn btn-default" value="+" id="17" name="suma">
+							<input class="numero" name="ingrediente" type="text" value="0" readonly="readonly">
+							<input type="button" class="btn btn-default" value="-" id="17" name="resta">
+							<label>
+								<img src="img/pimiento_morron.png" alt="Pimiento morrón" title="Pimiento morrón">
+								Pimiento morrón
+							</label>
+							</li>
+							<li>
+							<input type="button" class="btn btn-default" value="+" id="18" name="suma">
+							<input class="numero" name="ingrediente" type="text" value="0" readonly="readonly">
+							<input type="button" class="btn btn-default" value="-" id="18" name="resta">
+							<label>
+								<img src="img/pimiento_verde.png" alt="Pimiento verde" title="Pimiento verde">
+								Pimiento verde
+							</label>
+							</li>
+							<li>
+							<input type="button" class="btn btn-default" value="+" id="19" name="suma">
+							<input class="numero" name="ingrediente" type="text" value="0" readonly="readonly">
+							<input type="button" class="btn btn-default" value="-" id="19" name="resta">
+							<label>
+								<img src="img/pollo_marinado.png" alt="Pollo marinado" title="Pollo marinado">
+								Pollo marinado
+							</label>
+							</li>
+							<li>
+							<input type="button" class="btn btn-default" value="+" id="20" name="suma">
+							<input class="numero" name="ingrediente" type="text" value="0" readonly="readonly">
+							<input type="button" class="btn btn-default" value="-" id="20" name="resta">
+							<label>
+								<img src="img/pops_pollo.png" alt="Pops de pollo" title="Pops de pollo">
+								Pops de pollo
+							</label>
+							</li>
+							<li>
+							<input type="button" class="btn btn-default" value="+" id="21" name="suma">
+							<input class="numero" name="ingrediente" type="text" value="0" readonly="readonly">
+							<input type="button" class="btn btn-default" value="-" id="21" name="resta">
+							<label>
+								<img src="img/queso_cheddar.png" alt="Queso cheddar" title="Queso cheddar">
+								Queso cheddar
+							</label>
+							</li>
+							<li>
+							<input type="button" class="btn btn-default" value="+" id="22" name="suma">
+							<input class="numero" name="ingrediente" type="text" value="0" readonly="readonly">
+							<input type="button" class="btn btn-default" value="-" id="22" name="resta">
+							<label>
+								<img src="img/queso_rulo.png" alt="Queso de rulo" title="Queso de rulo">
+								Queso de rulo
+							</label>
+							</li>
+							<li>
+							<input type="button" class="btn btn-default" value="+" id="23" name="suma">
+							<input class="numero" name="ingrediente" type="text" value="0" readonly="readonly">
+							<input type="button" class="btn btn-default" value="-" id="23" name="resta">
+							<label>
+								<img src="img/queso_provolone.png" alt="Queso provolone" title="Queso provolone">
+								Queso provolone
+							</label>
+							</li>
+							<li>
+							<input type="button" class="btn btn-default" value="+" id="24" name="suma">
+							<input class="numero" name="ingrediente" type="text" value="0" readonly="readonly">
+							<input type="button" class="btn btn-default" value="-" id="24" name="resta">
+							<label>
+								<img src="img/queso_suizo_curado.png" alt="Queso suizo curado" title="Queso suizo curado">
+								Queso suizo curado
+							</label>
+							</li>
+							<li>
+							<input type="button" class="btn btn-default" value="+" id="25" name="suma">
+							<input class="numero" name="ingrediente" type="text" value="0" readonly="readonly">
+							<input type="button" class="btn btn-default" value="-" id="25" name="resta">
+							<label>
+								<img src="img/rucula.png" alt="Rúcula" title="Rúcula">
+								Rúcula
+							</label>
+							</li>
+							<li>
+							<input type="button" class="btn btn-default" value="+" id="26" name="suma">
+							<input class="numero" name="ingrediente" type="text" value="0" readonly="readonly">
+							<input type="button" class="btn btn-default" value="-" id="26" name="resta">
+							<label>
+								<img src="img/salami.png" alt="Salami" title="Salami">
+								Salami
+							</label>
+							</li>
+							<li>
+							<input type="button" class="btn btn-default" value="+" id="27" name="suma">
+							<input class="numero" name="ingrediente" type="text" value="0" readonly="readonly">
+							<input type="button" class="btn btn-default" value="-" id="27" name="resta">
+							<label>
+								<img src="img/salchicha.png" alt="Salchicha" title="Salchicha">
+								Salchicha
+							</label>
+							</li>
+							<li>
+							<input type="button" class="btn btn-default" value="+" id="28" name="suma">
+							<input class="numero" name="ingrediente" type="text" value="0" readonly="readonly">
+							<input type="button" class="btn btn-default" value="-" id="28" name="resta">
+							<label>
+								<img src="img/tomate_cherry.png" alt="Tomate Cherry" title="Tomate Cherry">
+								Tomate Cherry
+							</label>
+							</li>
+							<li>
+							<input type="button" class="btn btn-default" value="+" id="29" name="suma">
+							<input class="numero" name="ingrediente" type="text" value="0" readonly="readonly">
+							<input type="button" class="btn btn-default" value="-" id="29" name="resta">
+							<label>
+								<img src="img/tomate_natural.png" alt="Tomate natural" title="Tomate natural">
+								Tomate natural
+							</label>
+							</li>
+							<li>
+							<input type="button" class="btn btn-default" value="+" id="30" name="suma">
+							<input class="numero" name="ingrediente" type="text" value="0" readonly="readonly">
+							<input type="button" class="btn btn-default" value="-" id="30" name="resta">
+							<label>
+								<img src="img/york.png" alt="York" title="York">
+								York
+							</label>
+							</li>
+						</ul><!-- ul ingrediente -->
+					</fieldset><!-- fieldset ingrediente -->
+				</div><!-- div ingrediente -->
+				
+				<div class="cantidad">
+					<fieldset>
+						<label>Cantidad</label>
+							<select id="cantidad">
+								<option value="1" selected="selected">1</option>                            
+								<option value="2">2</option>                            
+								<option value="3">3</option>                            
+								<option value="4">4</option>                            
+								<option value="5">5</option>                            
+								<option value="6">6</option>                            
+								<option value="7">7</option>                            
+								<option value="8">8</option>                            
+								<option value="9">9</option>                            
+								<option value="10">10</option>                            
+							</select><!-- select cantidad -->
+							<button id="confirmacion" type="submit" class="btn btn-primary">Añadir al pedido</button><!-- button confirmacion -->
+					</fieldset><!-- fieldset cantidad -->
+				</div><!-- div cantidad -->
+		</form><!-- /from -->
+	</section><!-- /section formulario -->
+    
+	<footer>
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<p>© 2016 Derechos reservados | Diseñado por Martín Luis Becerra</p>
+			</div>
+		</div>
+	</footer><!-- /footer -->
+	
+	</div><!-- div container -->
+		
+	<!-- Librería jQuery requerida por los plugins de JavaScript -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+ 
+    <!-- Todos los plugins JavaScript de Bootstrap (también puedes
+         incluir archivos JavaScript individuales de los únicos
+         plugins que utilices) -->
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/formulario.js"></script>
+	
+  </body>
+</html>

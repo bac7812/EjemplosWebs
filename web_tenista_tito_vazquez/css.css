@@ -1,0 +1,97 @@
+﻿body {
+	font: normal small trebuchet MS, arial, helvetica, sans-serif;
+}
+h2 {
+	color: #01a9db;
+}
+.titulo {
+	margin-top: -10px;
+	margin-left: -10px;
+	font-size: 40px;
+}
+.subtitulo {
+	margin-top: -40px;
+	margin-left: 60px;
+	font-size: 25px;
+}
+#contenedor {
+	float: left;
+	background: url(img/img01.jpg) no-repeat;
+}
+#cabecera {
+	margin-left: 220px;
+}
+#menu {
+	float: left;
+	background: #000000;
+	margin-left: 190px;
+	width: 700px;
+	background: #e6e6e6;
+}
+.linea {
+	background: #ffbf00;
+	padding-top: 10px;
+	width: 700px;
+}
+#menu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#menu li {
+	display: inline;
+}
+#menu a {
+	display: block;
+	float: left;
+	width: 95px;
+	height: 25px;
+	padding-top: 10px;
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+	color: #000000;
+}
+#menu a:hover {
+	background: #ffbf00;
+	color: #fafafa;
+}
+#menu .active a {
+	background: #ffbf00;
+	color: #fafafa;
+}
+#contenido {
+  float: left;
+}
+#contenido #principal {
+  float: left;
+  padding: 10px 10px 0px 15px;
+  width: 490px;
+  margin-left: 190px;
+}
+img.foto {
+	float: right;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-right: 15px;
+	margin-left: 0px;
+}
+#contenido #secundario {
+  float: left;
+  padding: 10px 0px 0px 15px;
+  width: 190px;
+  border-left: 2px solid  #e6e6e6;
+}
+#pie {
+  clear: both;
+  padding: 10px 0px 0px 15px;
+  margin-left: 190px;
+  margin-bottom: 100px;
+  border-top: 2px solid  #e6e6e6;
+}
+#pie a {
+	text-align: left;
+}
+#pie span {
+	text-align: right;
+}
